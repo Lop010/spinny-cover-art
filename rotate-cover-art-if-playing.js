@@ -13,9 +13,13 @@ function checkPlayerStatus() {
   const mainPlayPauseButton = document.querySelector('.main-playPauseButton-button');
   const coverArt = document.querySelector('.cover-art');
   
-  // Place this here in case the user expands the cover art
+  // Place this here too case the user expands the cover art
   coverArt.style.clipPath = 'circle(50% at 50% 50%)';
   coverArt.style.animation = 'rotating 5s linear infinite';
+
+  // Place this here so it still rotates when they switch songs?
+  coverArt.style.animation = 'rotating 5s linear infinite';
+  coverArt.style.animationPlayState = 'paused';
 
   if (mainPlayPauseButton.getAttribute('aria-label') === 'Pause') {
     coverArt.style.animationPlayState = 'running';
